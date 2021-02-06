@@ -7,7 +7,10 @@ from app.config import Settings, get_settings
 
 
 def get_settings_override():
-    return Settings(testin=True, database_url=config("DATABASE_TEST_URL"))
+    return Settings(
+        testin=True,
+        database_url=config("DATABASE_TEST_URL", default="sqlite://sqlite.db"),
+    )
 
 
 @pytest.fixture(scope="module")

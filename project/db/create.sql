@@ -1,0 +1,2 @@
+CREATE DATABASE sbgo;
+CREATE DATABASE sbgo_test;

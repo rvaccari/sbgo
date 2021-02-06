@@ -3,13 +3,15 @@ from functools import lru_cache
 
 from decouple import config
 from pydantic import BaseSettings
+from pydantic.networks import AnyUrl
 
 log = logging.getLogger(__name__)
 
 
 class Settings(BaseSettings):
-    environment: str = config("ENVIRONMENT", "dev")
+    environment: str = config("ENVIRONMENT", default="dev")
     testing: bool = config("TESTING", default=False, cast=bool)
+    database_url: AnyUrl = config("DATABASE_URL", default="sqlite://sqlite.db")
 
 
 @lru_cache()
