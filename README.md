@@ -35,7 +35,7 @@ make test
 git clone git@github.com:rvaccari/sbgo.git
 cd sbgo/project
 cp contrib/env-sample .env
-cp contrib/env.docker-sample .env
+cp contrib/env.docker-sample .env.docker
 make docker-test
 make docker-up
 make docker-down
