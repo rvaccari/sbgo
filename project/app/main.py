@@ -1,23 +1,24 @@
-import fastapi
-import uvicorn
-from decouple import config
-from tortoise.contrib.fastapi import register_tortoise
+import logging
 
-app = fastapi.FastAPI()
+from fastapi import FastAPI, APIRouter
 
-register_tortoise(
-    app,
-    db_url=config("DATABASE_URL", default="sqlite://sqlite.db"),
-    modules={"models": ["app.models.customer"]},
-    generate_schemas=True,
-    add_exception_handlers=True,
-)
+from app.apis.v1 import customer
+from app.views import default
+
+logger = logging.getLogger(__name__)
 
 
-@app.get("/health")
-def health():
-    return fastapi.Response(content="OK")
+def init_routes(app: FastAPI):
+    router = APIRouter()
+    router.include_router(customer.router, prefix="/customers", tags=["customers"])
+    app.include_router(router, prefix="/api/v1")
+
+    app.include_router(default.router)
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="debug")
+def create_application() -> FastAPI:
+    app = FastAPI(title="Seu Barriga Gerador de Ofertas", docs_url="/swagger/")
+
+    init_routes(app)
+
+    return app

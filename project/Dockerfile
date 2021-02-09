@@ -21,6 +21,7 @@ RUN pip install -r requirements-dev.txt
 
 # add app
 COPY . .
+COPY .env.docker .env
 
 # add entrypoint.sh
 COPY ./entrypoint.sh .

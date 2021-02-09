@@ -1,0 +1,44 @@
+{
+  "offers": [
+    {
+      "partner_id": 1,
+      "partner_name": "Parceiro 1",
+      "value": 10000,
+      "installments": 24,
+      "tax_rate_percent_montly": 2,
+      "total_value": 12689.04
+    },
+    {
+      "partner_id": 2,
+      "partner_name": "Parceiro 2",
+      "value": 12000,
+      "installments": 36,
+      "tax_rate_percent_montly": 2.2,
+      "total_value": 17497.8
+    },
+    {
+      "partner_id": 3,
+      "partner_name": "Parceiro 3",
+      "value": 8000,
+      "installments": 24,
+      "tax_rate_percent_montly": 1.9,
+      "total_value": 10036.56
+    },
+    {
+      "partner_id": 4,
+      "partner_name": "Parceiro 4",
+      "value": 1000,
+      "installments": 12,
+      "tax_rate_percent_montly": 2.8,
+      "total_value": 1191.24
+    },
+    {
+      "partner_id": 5,
+      "partner_name": "Parceiro 5",
+      "value": 30000,
+      "installments": 60,
+      "tax_rate_percent_montly": 3.5,
+      "total_value": 72159.6
+    }
+  ]
+}
