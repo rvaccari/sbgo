@@ -26,13 +26,10 @@ make test
 ## Docker
 
 1. Clone o repositório.
-2. Crie um virtualenv com Python 3.8
-3. Ative o virtualenv.
-4. Instale as dependências.
-5. Configure a instância com o .env.
-6. Execute os testes.
-7. Execute a aplicação
-8. Pare a aplicação.
+2. Configure a instância com o .env.
+3. Execute os testes.
+4. Execute a aplicação
+5. Pare a aplicação.
 
 ```console
 git clone git@github.com:rvaccari/sbgo.git
