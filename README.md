@@ -27,8 +27,8 @@ make test
 
 1. Clone o repositório.
 2. Configure a instância com o .env.
-3. Execute os testes.
-4. Execute a aplicação
+3. Execute a aplicação.
+4. Execute os testes.
 5. Pare a aplicação.
 
 ```console
@@ -36,8 +36,8 @@ git clone git@github.com:rvaccari/sbgo.git
 cd sbgo/project
 cp contrib/env-sample .env
 cp contrib/env.docker-sample .env.docker
-make docker-test
 make docker-up
+make docker-test
 make docker-down
 ```
 
